@@ -1,4 +1,4 @@
-# agentgov
+# hapax-agentgov
 
 Governance hooks for AI coding agents. Extracted from a production system running 47 hooks across 200+ agents.
 
@@ -7,7 +7,7 @@ Works with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) hooks. 
 ## Quick start
 
 ```bash
-pip install agentgov
+pip install hapax-agentgov
 cd your-project
 agentgov init
 ```
