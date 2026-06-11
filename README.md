@@ -71,6 +71,16 @@ agentgov report
 agentgov report --json    # machine-readable output
 ```
 
+## Enterprise adoption
+
+Start with advisory mode before enforcement. The enterprise guide covers a
+safe pilot shape, license and attribution expectations, security readiness
+checks, and the boundary between free adoption and paid support:
+
+- [Enterprise adoption guide](docs/enterprise-adoption.md)
+- [AI work evidence packet example](examples/ai-work-evidence-packet.md)
+- [Advisory governance policy example](examples/advisory-governance-policy.md)
+
 ## How hooks work
 
 Claude Code hooks are shell scripts that run before (`PreToolUse`) or after (`PostToolUse`) tool calls. They receive the tool name and input as JSON on stdin:
