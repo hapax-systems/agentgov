@@ -1,6 +1,6 @@
 [project]
 name = "hapax-agentgov"
-version = "0.3.0"
+version = "0.3.1"
 description = "Governance hooks for AI coding agents — enforce safety, git hygiene, and project rules via Claude Code hooks."
 readme = "README.md"
 license = "MIT"
