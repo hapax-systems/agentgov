@@ -73,9 +73,11 @@ agentgov report --json    # machine-readable output
 
 ## Enterprise adoption
 
-Start with advisory mode before enforcement. The enterprise guide covers a
-safe pilot shape, license and attribution expectations, security readiness
-checks, and the boundary between free adoption and paid support:
+Start with an advisory pilot before enforcement in production. In this release,
+installed hooks enforce their checks; advisory means using a sandbox, fork, or
+low-risk repository to inspect findings before promotion. The enterprise guide
+covers a safe pilot shape, license and attribution expectations, security
+readiness checks, and the boundary between free adoption and paid support:
 
 - [Enterprise adoption guide](docs/enterprise-adoption.md)
 - [AI work evidence packet example](examples/ai-work-evidence-packet.md)

@@ -17,13 +17,16 @@ It is not:
 Use this order:
 
 1. Inventory local AI-assisted development workflows.
-2. Select one low-risk repository or sandbox.
+2. Select one low-risk repository, fork, or sandbox.
 3. Install `hapax-agentgov` under normal open-source intake rules.
-4. Run `agentgov init --preset minimal` or `agentgov init --preset safe`.
-5. Run `agentgov check` and keep the output as evidence.
-6. Keep the first pilot advisory: collect findings before adding hard blocks.
+4. Run `agentgov init --preset minimal` or `agentgov init --preset safe` only
+   in that review environment. In this release, installed hooks enforce by
+   exiting non-zero when they block; there is no separate CLI advisory switch.
+5. Run `agentgov check` and `agentgov report` and keep the output as evidence.
+6. Keep the first production rollout advisory by reviewing sandbox findings
+   before installing hooks in production repositories.
 7. Use an AI work evidence packet for each meaningful AI-assisted change.
-8. Promote individual hooks to enforcement only after local review.
+8. Promote individual hooks to production enforcement only after local review.
 
 ## License And Attribution
 
@@ -54,7 +57,8 @@ Before a production or public adoption push, collect:
 - dependency vulnerability scan;
 - secret-scan result;
 - documented hook coverage and known limitations;
-- human approval for any hook promoted from advisory to enforcement.
+- human approval for any hook promoted from sandbox review to production
+  enforcement.
 
 Recommended external frameworks for mapping:
 
@@ -79,6 +83,6 @@ support language distinct.
 - [ ] No private Hapax code or runtime state is imported.
 - [ ] No confidential organization data is copied into public examples.
 - [ ] The package version and license are recorded.
-- [ ] The first pilot starts advisory.
+- [ ] The first pilot starts in a sandbox, fork, or other review environment.
 - [ ] Findings are reviewed by a human before enforcement.
 - [ ] Any outbound feedback is sanitized and generic.

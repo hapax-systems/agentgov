@@ -1,6 +1,9 @@
 # Advisory Governance Policy Example
 
-Use advisory mode before enforcement. This example is intentionally generic.
+Use an advisory rollout before production enforcement. In `hapax-agentgov`
+0.3.1, advisory is a process choice rather than a CLI mode: evaluate hooks in a
+sandbox, fork, or other low-risk review environment before installing them in
+production repositories.
 
 ## Purpose
 
@@ -13,13 +16,15 @@ understand what changed, what the AI did, and which checks passed.
 - Secrets, credentials, customer data, and private personal data must not be
   placed in prompts or public examples.
 - `agentgov check` output is retained with the work evidence packet.
-- Hook failures are reviewed before enforcement is tightened.
+- Hook failures from the review environment are retained and evaluated before
+  production enforcement is added.
 - A human owner decides whether the change is accepted, revised, rejected, or
   escalated.
 
 ## Pilot Stages
 
-1. Observe: run checks and collect findings without blocking work.
+1. Observe: run checks in a review environment and collect findings without
+   blocking production work.
 2. Warn: make repeated failures visible to reviewers.
 3. Enforce: block only the checks that have been reviewed and approved locally.
 
