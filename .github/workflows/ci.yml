@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: read
+  id-token: write
 
 jobs:
   lint:
@@ -46,7 +47,7 @@ jobs:
           flags: python
           name: hapax-agentgov-python
           fail_ci_if_error: false
-          token: ${{ secrets.CODECOV_TOKEN }}
+          use_oidc: true
 
   secrets-scan:
     runs-on: ubuntu-latest
