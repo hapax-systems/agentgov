@@ -1,0 +1,23 @@
+$schema: https://coderabbit.ai/integrations/schema.v2.json
+
+reviews:
+  request_changes_workflow: false
+  review_status: true
+  auto_review:
+    enabled: true
+    drafts: false
+  path_filters:
+    - "!uv.lock"
+  path_instructions:
+    - path: "src/agentgov/**"
+      instructions: >-
+        Review for hook safety boundaries, deterministic CLI behavior, and
+        compatibility with Claude Code hook contracts. Treat findings as
+        advisory relative to Hapax governance.
+    - path: "tests/**"
+      instructions: >-
+        Check that tests cover command behavior, generated hook artifacts, and
+        guard failure modes without depending on host-specific state.
+
+chat:
+  auto_reply: false

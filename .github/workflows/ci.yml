@@ -1,0 +1,80 @@
+name: CI
+
+on:
+  pull_request: {}
+  push:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: astral-sh/setup-uv@v7
+      - name: Install dependencies
+        run: uv sync --locked
+      - name: Ruff format check
+        run: uv run ruff format --check .
+      - name: Ruff lint
+        run: uv run ruff check .
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: astral-sh/setup-uv@v7
+      - name: Install dependencies
+        run: uv sync --locked
+      - name: Run tests with coverage
+        run: >-
+          uv run --with pytest-cov pytest
+          --cov=agentgov
+          --cov-report=term
+          --cov-report=xml
+      - name: Upload coverage to Codecov
+        if: >-
+          always() &&
+          (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
+        uses: codecov/codecov-action@v5
+        with:
+          files: ./coverage.xml
+          flags: python
+          name: hapax-agentgov-python
+          fail_ci_if_error: false
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+  secrets-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-go@v6
+        with:
+          go-version: "1.25.x"
+      - name: Run Gitleaks
+        run: |
+          tmp="$RUNNER_TEMP/gitleaks-source"
+          mkdir -p "$tmp"
+          git ls-files -z | rsync --files-from=- --from0 -a ./ "$tmp"/
+          go run github.com/zricethezav/gitleaks/v8@latest dir --redact --verbose "$tmp"
+
+  all-green:
+    if: always()
+    needs:
+      - lint
+      - test
+      - secrets-scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check required CI jobs
+        run: |
+          for result in "${{ needs.lint.result }}" "${{ needs.test.result }}" "${{ needs.secrets-scan.result }}"; do
+            if [[ "$result" != "success" ]]; then
+              echo "Required job failed or was skipped: $result" >&2
+              exit 1
+            fi
+          done
