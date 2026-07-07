@@ -8,6 +8,10 @@ This repository is part of the Hapax Systems portfolio. Public metadata, issue a
 
 Portable governance hooks that an adopter can install, audit, and pilot without inheriting the Hapax estate.
 
+## Reader value
+
+Turns common AI coding-agent risks into installable pre-action checks that teams can pilot before buying or building heavier governance.
+
 ## Claim ceiling
 
 Adoption commons for hooks only; not the full Hapax governance system, not policyflow, and not a staffed support service.
