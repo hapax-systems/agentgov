@@ -1,0 +1,25 @@
+{
+  "title": "agentgov",
+  "description": "Standalone governance hooks for AI coding agents. Permissive public adoption wedge for safety, git hygiene, and project-rule checks.",
+  "creators": [
+    {
+      "name": "Hapax Systems"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "upload_type": "software",
+  "keywords": [
+    "ai-governance",
+    "developer-tools",
+    "governance",
+    "safety"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/hapax-systems/hapax-council",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    }
+  ]
+}
