@@ -8,6 +8,10 @@
 
 Portable governance hooks that an adopter can install, audit, and pilot without inheriting the Hapax estate.
 
+## Reader value
+
+Turns common AI coding-agent risks into installable pre-action checks that teams can pilot before buying or building heavier governance.
+
 ## Claim ceiling
 
 Adoption commons for hooks only; not the full Hapax governance system, not policyflow, and not a staffed support service.
@@ -58,17 +62,17 @@ This scaffolds `.claude/hooks/` and registers the selected hooks in
 
 ## What ships
 
-| Hook | Category | Boundary |
-|---|---|---|
-| `pii-guard` | safety | Blocks tracked writes that introduce common personal-data patterns. |
-| `secrets-guard` | safety | Blocks common API keys, tokens, and private-key material. |
-| `conflict-marker-scan` | safety | Warns when merge-conflict markers appear after a merge or rebase. |
-| `safe-stash-guard` | git | Blocks `git stash pop`; use `apply` plus explicit `drop` after review. |
-| `push-gate` | git | Blocks autonomous push and PR mutation paths without approval evidence. |
-| `no-stale-branches` | git | Blocks new branch creation while unresolved unmerged work exists. |
-| `work-resolution-gate` | workflow | Blocks code edits on branches that have no open PR resolution path. |
-| `pkg-manager-guard` | tooling | Enforces the configured package manager boundary. |
-| `protected-paths` | workflow | Blocks edits to sensitive path patterns such as keys and certificates. |
+| Hook | Category | Boundary | Reader value |
+|---|---|---|---|
+| `pii-guard` | safety | Blocks tracked writes that introduce common personal-data patterns. | Reduces the risk that an agent turns a routine edit into a privacy incident. |
+| `secrets-guard` | safety | Blocks common API keys, tokens, and private-key material. | Catches one of the fastest ways an autonomous coding run can create cleanup work. |
+| `conflict-marker-scan` | safety | Warns when merge-conflict markers appear after a merge or rebase. | Keeps mechanical merge residue from being treated as finished code. |
+| `safe-stash-guard` | git | Blocks `git stash pop`; use `apply` plus explicit `drop` after review. | Preserves a reviewable rollback path when work is recovered from a stash. |
+| `push-gate` | git | Blocks autonomous push and PR mutation paths without approval evidence. | Makes repository publication a governed act instead of an accidental tool call. |
+| `no-stale-branches` | git | Blocks new branch creation while unresolved unmerged work exists. | Keeps agent work from spreading across hidden branches before prior work is resolved. |
+| `work-resolution-gate` | workflow | Blocks code edits on branches that have no open PR resolution path. | Forces implementation work to stay attached to a visible review and closeout path. |
+| `pkg-manager-guard` | tooling | Enforces the configured package manager boundary. | Prevents dependency churn caused by an agent choosing a different local toolchain. |
+| `protected-paths` | workflow | Blocks edits to sensitive path patterns such as keys and certificates. | Gives high-risk files an explicit tripwire before generated edits land. |
 
 ## CLI
 
