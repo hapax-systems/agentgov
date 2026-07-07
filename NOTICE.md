@@ -2,7 +2,7 @@
 
 `agentgov` is the bounded adoption-commons repository in the Hapax Systems portfolio. It is published for inspection and pilot use without granting rights to the broader Hapax runtime estate.
 
-This repository is part of the Hapax Systems portfolio. Public metadata, issue affordances, and support boundaries are governed by the registry in `hapax-constitution`.
+This repository is part of the Hapax Systems portfolio. Public metadata, issue affordances, and support boundaries follow the registry in `hapax-constitution`.
 
 ## Reader promise
 

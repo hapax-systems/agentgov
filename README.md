@@ -1,3 +1,36 @@
+<!-- hapax-sdlc:preamble:begin -->
+
+# agentgov
+
+`agentgov` is the bounded adoption-commons repository in the Hapax Systems portfolio. It is published so adopters can inspect and pilot the governance-hook surface without inheriting the Hapax runtime estate.
+
+## Reader promise
+
+Portable governance hooks that an adopter can install, audit, and pilot without inheriting the Hapax estate.
+
+## Claim ceiling
+
+Adoption commons for hooks only; not the full Hapax governance system, not policyflow, and not a staffed support service.
+
+## License and rights
+
+Permissive adoption surface; copy may say MIT for agentgov only and must not imply broader Hapax runtime rights or support obligations.
+
+Rendered summary: MIT. See `LICENSE` for the authority surfaces.
+
+## Public boundary
+
+- Issues are redirect-only and support is bounded; pull requests are not the intake path for this repository
+- Public copy must use `hapax-systems` organization links for first-party Hapax repositories.
+- Publication, weblog, RSS, social, DOI/archive, and other public fanout paths must route through the governed publication bus or a documented guarded legacy surface.
+- Governance reference: https://github.com/hapax-systems/hapax-constitution
+
+## Portfolio position
+
+Public adoption commons. Separate from council-local policyflow primitives and from the Hapax council runtime.
+
+<!-- hapax-sdlc:preamble:end -->
+
 # agentgov
 
 `agentgov` is the Hapax Systems adoption commons: a small MIT-licensed
