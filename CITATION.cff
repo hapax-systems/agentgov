@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: If you use this software in your research, please cite it as below.
+type: software
+title: agentgov
+abstract: Standalone governance hooks for AI coding agents. Permissive public adoption
+  wedge for safety, git hygiene, and project-rule checks.
+authors:
+- name: Hapax Systems
+repository-code: https://github.com/hapax-systems/agentgov
+url: https://github.com/hapax-systems/agentgov
+license: MIT
+keywords:
+- ai-governance
+- developer-tools
+- governance
+- safety

@@ -1,0 +1,28 @@
+{
+  "@context": "https://w3id.org/codemeta/3.0",
+  "@type": "SoftwareSourceCode",
+  "name": "agentgov",
+  "description": "Standalone governance hooks for AI coding agents. Permissive public adoption wedge for safety, git hygiene, and project-rule checks.",
+  "codeRepository": "https://github.com/hapax-systems/agentgov",
+  "url": "https://github.com/hapax-systems/agentgov",
+  "license": "https://spdx.org/licenses/MIT",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Hapax Systems",
+      "url": "https://github.com/hapax-systems"
+    }
+  ],
+  "applicationCategory": "SoftwareLibrary",
+  "developmentStatus": "active",
+  "isAccessibleForFree": true,
+  "keywords": [
+    "ai-governance",
+    "developer-tools",
+    "governance",
+    "safety"
+  ],
+  "relatedLink": [
+    "https://github.com/hapax-systems/hapax-council"
+  ]
+}
