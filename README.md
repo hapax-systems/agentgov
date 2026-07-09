@@ -1,4 +1,5 @@
 <!-- hapax-sdlc:preamble:begin -->
+<!-- hapax-public:surface=github.repo.agentgov.readme.preamble:begin -->
 
 # agentgov
 
@@ -34,6 +35,7 @@ Rendered summary: MIT. See `LICENSE` for the authority surfaces.
 
 Public adoption commons. Separate from council-local policyflow primitives and from the Hapax council runtime.
 
+<!-- hapax-public:surface=github.repo.agentgov.readme.preamble:end -->
 <!-- hapax-sdlc:preamble:end -->
 
 # agentgov
