@@ -26,6 +26,7 @@ Rendered summary: MIT. See `LICENSE` for the authority surfaces.
 
 - Issues are redirect-only and support is bounded; pull requests are not the intake path for this repository
 - Public copy must use `hapax-systems` organization links for first-party Hapax repositories.
+- README text is orientation, not a freshness witness; current public claims require surface-specific release, reconcile, or publication receipts.
 - Publication, weblog, RSS, social, DOI/archive, and other public fanout paths must route through the governed publication bus or a documented guarded legacy surface.
 - Governance reference: https://github.com/hapax-systems/hapax-constitution
 
