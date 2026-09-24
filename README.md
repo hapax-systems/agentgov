@@ -1,3 +1,40 @@
+# agentgov — historical hook toolkit
+
+**Retired from active development — 2026-09-24.** This repository preserves
+Hapax Systems' earlier command- and file-pattern hook toolkit. Its framing as
+the current adoption entry point has been superseded. The source, examples,
+MIT license, and [v0.3.1 release](https://github.com/hapax-systems/agentgov/releases/tag/v0.3.1)
+remain available for historical inspection.
+
+## Where the work continues
+
+- **Runtime mechanisms, published source:**
+  [hapax-spine](https://github.com/hapax-systems/hapax-spine) contains routing,
+  receipts, quota, and projection mechanisms. It has its own license and
+  instance-configuration requirements; it is not a drop-in replacement for
+  these hooks.
+- **CHANC verifier work — research/in development:** the successor direction
+  concerns evidence and verification of governance claims. No released
+  replacement verifier or standards adoption is asserted here.
+- **OpenCode-based reference-client work — research/in development:** the
+  successor direction explores an executable governance reference client.
+  It is not offered here as a released migration target.
+
+Retirement applies to **this standalone hook repository**. The separately
+maintained [Council `packages/agentgov` library](https://github.com/hapax-systems/hapax-council/tree/main/packages/agentgov)
+contains governance primitives and is outside this disposition.
+
+## Historical documentation
+
+The original README follows unchanged to preserve provenance. Its installation
+instructions, adoption language, and descriptions of blocking behavior record
+an earlier project state; they are not a current recommendation to deploy this
+toolkit. Pattern checks at selected tool boundaries do not establish complete
+coverage of agent behavior or a general security boundary. This notice does not
+change existing license grants or withdraw previously published packages.
+
+---
+
 <!-- hapax-sdlc:preamble:begin -->
 <!-- hapax-public:surface=github.repo.agentgov.readme.preamble:begin -->
 
