@@ -1,95 +1,23 @@
-# agentgov — historical hook toolkit
+# agentgov — Archived Early Prototype
 
-**Retired from active development — 2026-09-24.** This repository preserves
-Hapax Systems' earlier command- and file-pattern hook toolkit. Its framing as
-the current adoption entry point has been superseded. The source, examples,
-MIT license, and [v0.3.1 release](https://github.com/hapax-systems/agentgov/releases/tag/v0.3.1)
-remain available for historical inspection.
+> **Archived / Inactive (`v0.3.2`).** `agentgov` (`hapax-agentgov` on PyPI) is an early standalone governance-hook prototype from **Hapax Research Lab** ([hapaxresearch.com](https://hapaxresearch.com)) and is no longer under active development.
+>
+> - **Active governance cockpit & frontdoor:** [hapax-systems/reins](https://github.com/hapax-systems/reins)
+> - **Runtime governance & routing mechanisms:** [hapax-systems/hapax-spine](https://github.com/hapax-systems/hapax-spine)
+> - **Lab overview & publications:** [https://hapaxresearch.com](https://hapaxresearch.com)
+> - **Security disclosures:** `hrl-han@hapaxresearch.com` (see [SECURITY.md](SECURITY.md))
 
-## Where the work continues
-
-- **Runtime mechanisms, published source:**
-  [hapax-spine](https://github.com/hapax-systems/hapax-spine) contains routing,
-  receipts, quota, and projection mechanisms. It has its own license and
-  instance-configuration requirements; it is not a drop-in replacement for
-  these hooks.
-- **CHANC verifier work — research/in development:** the successor direction
-  concerns evidence and verification of governance claims. No released
-  replacement verifier or standards adoption is asserted here.
-- **OpenCode-based reference-client work — research/in development:** the
-  successor direction explores an executable governance reference client.
-  It is not offered here as a released migration target.
-
-Retirement applies to **this standalone hook repository**. The separately
-maintained [Council `packages/agentgov` library](https://github.com/hapax-systems/hapax-council/tree/main/packages/agentgov)
-contains governance primitives and is outside this disposition.
-
-## Historical documentation
-
-The original README follows unchanged to preserve provenance. Its installation
-instructions, adoption language, and descriptions of blocking behavior record
-an earlier project state; they are not a current recommendation to deploy this
-toolkit. Pattern checks at selected tool boundaries do not establish complete
-coverage of agent behavior or a general security boundary. This notice does not
-change existing license grants or withdraw previously published packages.
+Release `0.3.2` publishes this retirement notice, updates package metadata to `Development Status :: 7 - Inactive`, and aligns the security disclosure contact with `hrl-han@hapaxresearch.com`. Existing MIT license grants and historical source remain intact for inspection and citation.
 
 ---
 
-<!-- hapax-sdlc:preamble:begin -->
-<!-- hapax-public:surface=github.repo.agentgov.readme.preamble:begin -->
+## Historical Overview
 
-# agentgov
+`agentgov` was published as a small MIT-licensed hook toolkit for governing AI coding agents at the local tool boundary before building heavier governance infrastructure. Hooks inspect file edits, shell commands, git actions, and project preconditions before the agent acts; when a check fails, the tool call is blocked with an actionable diagnostic on stderr.
 
-`agentgov` is the bounded adoption-commons repository in the Hapax Systems portfolio. It is published so adopters can inspect and pilot the governance-hook surface without inheriting the Hapax runtime estate.
+Pattern checks at selected tool boundaries do not establish complete coverage of agent behavior or a general security boundary. New evaluations should inspect [hapax-systems/reins](https://github.com/hapax-systems/reins) and [hapaxresearch.com](https://hapaxresearch.com).
 
-## Reader promise
-
-Portable governance hooks that an adopter can install, audit, and pilot without inheriting the Hapax estate.
-
-## Reader value
-
-Turns common AI coding-agent risks into installable pre-action checks that teams can pilot before buying or building heavier governance.
-
-## Claim ceiling
-
-Adoption commons for hooks only; not the full Hapax governance system, not policyflow, and not a staffed support service.
-
-## License and rights
-
-Permissive adoption surface; copy may say MIT for agentgov only and must not imply broader Hapax runtime rights or support obligations.
-
-Rendered summary: MIT. See `LICENSE` for the authority surfaces.
-
-## Public boundary
-
-- Issues are redirect-only and support is bounded; pull requests are not the intake path for this repository
-- Public copy must use `hapax-systems` organization links for first-party Hapax repositories.
-- README text is orientation, not a freshness witness; current public claims require surface-specific release, reconcile, or publication receipts.
-- Publication, weblog, RSS, social, DOI/archive, and other public fanout paths must route through the governed publication bus or a documented guarded legacy surface.
-- Governance reference: https://github.com/hapax-systems/hapax-constitution
-
-## Portfolio position
-
-Public adoption commons. Separate from council-local policyflow primitives and from the Hapax council runtime.
-
-<!-- hapax-public:surface=github.repo.agentgov.readme.preamble:end -->
-<!-- hapax-sdlc:preamble:end -->
-
-# agentgov
-
-`agentgov` is the Hapax Systems adoption commons: a small MIT-licensed
-hook layer for governing AI coding agents at the tool boundary.
-
-It gives teams a concrete place to start before they build a full agent
-governance program. Hooks inspect file edits, shell commands, git actions,
-and project preconditions before the agent acts. When a check fails, the
-tool call is blocked and the agent receives a specific error to work from.
-
-`agentgov` is not the Hapax runtime, not Reins, and not a hosted service. It
-is the portable part: inspectable shell hooks, configuration, and examples
-that an adopter can pilot in a low-risk repository.
-
-## Quick start
+## Historical Quick Start
 
 ```bash
 pip install hapax-agentgov
@@ -97,41 +25,23 @@ cd your-project
 agentgov init
 ```
 
-This scaffolds `.claude/hooks/` and registers the selected hooks in
-`.claude/settings.local.json`.
+This scaffolds `.claude/hooks/` and registers the selected hooks in `.claude/settings.local.json`.
 
-## What ships
+## Included Hook Scripts
 
-| Hook | Category | Boundary | Reader value |
-|---|---|---|---|
-| `pii-guard` | safety | Blocks tracked writes that introduce common personal-data patterns. | Reduces the risk that an agent turns a routine edit into a privacy incident. |
-| `secrets-guard` | safety | Blocks common API keys, tokens, and private-key material. | Catches one of the fastest ways an autonomous coding run can create cleanup work. |
-| `conflict-marker-scan` | safety | Warns when merge-conflict markers appear after a merge or rebase. | Keeps mechanical merge residue from being treated as finished code. |
-| `safe-stash-guard` | git | Blocks `git stash pop`; use `apply` plus explicit `drop` after review. | Preserves a reviewable rollback path when work is recovered from a stash. |
-| `push-gate` | git | Blocks autonomous push and PR mutation paths without approval evidence. | Makes repository publication a governed act instead of an accidental tool call. |
-| `no-stale-branches` | git | Blocks new branch creation while unresolved unmerged work exists. | Keeps agent work from spreading across hidden branches before prior work is resolved. |
-| `work-resolution-gate` | workflow | Blocks code edits on branches that have no open PR resolution path. | Forces implementation work to stay attached to a visible review and closeout path. |
-| `pkg-manager-guard` | tooling | Enforces the configured package manager boundary. | Prevents dependency churn caused by an agent choosing a different local toolchain. |
-| `protected-paths` | workflow | Blocks edits to sensitive path patterns such as keys and certificates. | Gives high-risk files an explicit tripwire before generated edits land. |
+| Hook | Category | Boundary |
+|---|---|---|
+| `pii-guard` | safety | Blocks tracked writes that introduce common personal-data or home-path patterns. |
+| `secrets-guard` | safety | Blocks tracked writes containing common credential or token patterns. |
+| `protected-paths` | safety | Prevents unapproved edits to sensitive or locked repository paths. |
+| `conflict-marker-scan` | git-hygiene | Rejects files containing unresolved merge-conflict markers. |
+| `no-stale-branches` | git-hygiene | Warns or blocks work on stale feature branches. |
+| `push-gate` | git-hygiene | Enforces local verification gates prior to git push operations. |
+| `safe-stash-guard` | git-hygiene | Guards against destructive git stash drops or overwrites. |
+| `pkg-manager-guard` | project-rules | Enforces consistent package-manager invocation within a repository. |
+| `work-resolution-gate` | project-rules | Checks work-item or evidence prerequisites before completion. |
 
-## CLI
-
-```bash
-agentgov init                    # safe preset
-agentgov init --preset strict    # all bundled hooks
-agentgov init --preset minimal   # pii-guard + conflict-marker-scan
-agentgov init --force            # overwrite generated hook scripts
-
-agentgov check                   # validate installed hook configuration
-agentgov report                  # summarize configured coverage
-agentgov report --json           # machine-readable coverage
-```
-
-## Pilot Shape
-
-Start advisory in a sandbox, fork, or low-risk repository. The installed
-hooks enforce their checks, so "advisory" means evaluating the findings and
-operational fit before promotion to production repos.
+## Historical Documentation & Examples
 
 - [Enterprise adoption guide](docs/enterprise-adoption.md)
 - [AI work evidence packet example](examples/ai-work-evidence-packet.md)
@@ -139,9 +49,7 @@ operational fit before promotion to production repos.
 
 ## How Hooks Work
 
-Claude Code hooks are shell scripts that run before or after tool calls. They
-receive the tool name and input as JSON on stdin. A hook exits `0` to allow
-the action and exits `2` to block it with a message on stderr.
+Claude Code hooks are shell scripts that run before or after tool calls. They receive the tool name and input as JSON on stdin. A hook exits `0` to allow the action and exits `2` to block it with a message on stderr.
 
 ```json
 {
@@ -153,19 +61,8 @@ the action and exits `2` to block it with a message on stderr.
 }
 ```
 
-Custom hooks can be dropped into `.claude/hooks/` and registered in
-`.claude/settings.local.json`.
+## Boundary & License
 
-## Boundary
+`agentgov` is MIT licensed (see [LICENSE](LICENSE)). The broader Hapax Research Lab portfolio includes repositories with distinct licenses and support boundaries; do not infer license grants or support commitments for [reins](https://github.com/hapax-systems/reins) or [hapax-spine](https://github.com/hapax-systems/hapax-spine) from this archived package.
 
-`agentgov` is the permissive adoption surface. The broader Hapax Systems
-portfolio includes source-available and source-visible repositories with
-different licenses and support boundaries. Do not infer rights for Reins,
-hapax-spine, or hapax-council from the MIT license on this package.
-
-GitHub Issues are redirect-only. Support, commercial engagement, roadmap
-commitments, and feature-request handling do not happen through this repo.
-
-## License
-
-MIT. See [LICENSE](LICENSE).
+GitHub Issues are redirect-only. Governance rules live in [hapax-systems/hapax-constitution](https://github.com/hapax-systems/hapax-constitution).

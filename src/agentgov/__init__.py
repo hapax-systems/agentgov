@@ -1,3 +1,3 @@
-"""agentgov — Governance hooks for AI coding agents."""
+"""agentgov — Archived early governance-hook prototype (superseded by hapax-systems/reins)."""
 
-__version__ = "0.3.1"
+__version__ = "0.3.2"
