@@ -1,13 +1,16 @@
 cff-version: 1.2.0
-message: If you use this software in your research, please cite it as below.
+message: If you cite this repository or its artifacts in research, please cite it
+  as below.
 type: software
 title: agentgov
-version: 0.3.2
-abstract: "[Archived] Early prototype superseded by hapax-systems/reins — Hapax Research Lab"
+abstract: '[Archived] Early prototype superseded by hapax-systems/reins — Hapax Research
+  Lab'
 authors:
 - name: Hapax Research Lab
+  email: hrl-han@hapaxresearch.com
+  website: https://hapaxresearch.com
 repository-code: https://github.com/hapax-systems/agentgov
-url: https://hapaxresearch.com
+url: https://github.com/hapax-systems/agentgov
 license: MIT
 keywords:
 - ai-governance

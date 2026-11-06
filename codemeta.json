@@ -2,15 +2,15 @@
   "@context": "https://w3id.org/codemeta/3.0",
   "@type": "SoftwareSourceCode",
   "name": "agentgov",
-  "version": "0.3.2",
   "description": "[Archived] Early prototype superseded by hapax-systems/reins — Hapax Research Lab",
   "codeRepository": "https://github.com/hapax-systems/agentgov",
-  "url": "https://hapaxresearch.com",
-  "license": "https://spdx.org/licenses/MIT",
+  "url": "https://github.com/hapax-systems/agentgov",
+  "license": "https://spdx.org/licenses/MIT.html",
   "author": [
     {
       "@type": "Organization",
       "name": "Hapax Research Lab",
+      "email": "hrl-han@hapaxresearch.com",
       "url": "https://hapaxresearch.com"
     }
   ],
@@ -25,6 +25,7 @@
   ],
   "relatedLink": [
     "https://github.com/hapax-systems/reins",
-    "https://hapaxresearch.com"
+    "https://hapaxresearch.com",
+    "https://github.com/hapax-systems/hapax-constitution"
   ]
 }
