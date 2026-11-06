@@ -1,16 +1,16 @@
 # Support
 
-`agentgov` is the bounded adoption surface for Hapax Systems. It is published to make the adopter-facing governance primitives inspectable and usable without turning the repository into a staffed support channel.
+**[Archived Prototype — Superseded by [hapax-systems/reins](https://github.com/hapax-systems/reins)]** `agentgov` is an archived early prototype from **Hapax Research Lab** (https://hapaxresearch.com) and is no longer under active development or staffed support. Direct new evaluations to [hapax-systems/reins](https://github.com/hapax-systems/reins).
 
 ## GitHub issues
 
-GitHub Issues are kept available only as a redirect surface. Blank issues are disabled; the issue chooser points readers to the appropriate published files instead of opening a support queue.
+GitHub Issues are kept available only as a redirect surface. Blank issues are disabled; the issue chooser points readers to the published boundary files instead of opening a support queue.
 
 ## What is in scope
 
 - Reading the repository and its rendered metadata.
 - Citing the repository through `CITATION.cff` and `.zenodo.json`.
-- Reporting a concrete security disclosure through `SECURITY.md`.
+- Reporting a concrete security disclosure or factual correction proposal to `hrl-han@hapaxresearch.com` (see `SECURITY.md` and https://hapaxresearch.com/about/#contact; the network commits to receipt, retention and published correction, and promises no response time).
 - Following the governance boundary through `GOVERNANCE.md` and https://github.com/hapax-systems/hapax-constitution.
 
 ## What is out of scope

@@ -18,7 +18,17 @@
   "related_identifiers": [
     {
       "identifier": "https://github.com/hapax-systems/reins",
-      "relation": "isContinuedBy",
+      "relation": "isObsoletedBy",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://hapaxresearch.com",
+      "relation": "isPartOf",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/hapax-systems/hapax-constitution",
+      "relation": "isSupplementedBy",
       "scheme": "url"
     }
   ]

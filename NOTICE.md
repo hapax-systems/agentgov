@@ -1,38 +1,41 @@
 # NOTICE - agentgov
 
-`agentgov` is the bounded adoption-commons repository in the Hapax Systems portfolio. It is published for inspection and pilot use without granting rights to the broader Hapax runtime estate.
+**[Archived Prototype — Superseded by [hapax-systems/reins](https://github.com/hapax-systems/reins)]** `agentgov` is an archived early prototype in the Hapax Research Lab portfolio retained for historical inspection and citation.
 
-This repository is part of the Hapax Systems portfolio. Public metadata, issue affordances, and support boundaries follow the registry in `hapax-constitution`.
+This repository is published by **Hapax Research Lab** (`hrl-han`, https://hapaxresearch.com). Public metadata, issue affordances, and support boundaries follow the registry in `hapax-constitution`.
 
 ## Reader promise
 
-Portable governance hooks that an adopter can install, audit, and pilot without inheriting the Hapax estate.
+Archived early governance-hook prototype retained for historical inspection and citation; active work lives in hapax-systems/reins.
 
 ## Reader value
 
-Turns common AI coding-agent risks into installable pre-action checks that teams can pilot before buying or building heavier governance.
+Preserves historical pre-action hook scripts and MIT source for reference while directing new evaluations to hapax-systems/reins and https://hapaxresearch.com.
 
 ## Claim ceiling
 
-Adoption commons for hooks only; not the full Hapax governance system, not policyflow, and not a staffed support service.
+Archived prototype (v0.3.2, inactive); pattern checks at local tool boundaries do not establish complete coverage of agent behavior or a general security boundary.
 
 ## License and rights
 
-Permissive adoption surface; copy may say MIT for agentgov only and must not imply broader Hapax runtime rights or support obligations.
+Archived MIT-licensed prototype; existing MIT grants remain intact for historical inspection and citation of agentgov only and do not imply rights or support obligations across active Hapax Research Lab repositories.
 
 Rendered summary: MIT - permissive.
 
 ## Public boundary
 
-- Issues are redirect-only, support is bounded, and pull requests are not the intake path for this repository.
+- Repository is archived and read-only; evaluate https://github.com/hapax-systems/reins for active governed agent-delivery inspection.
 - First-party public links must use the `hapax-systems` GitHub organization.
-- Public fanout must route through the governed publication bus or a documented guarded legacy surface.
+- Legal entity (as filed): Hapax Research LLC, organized in Wyoming on 2026-05-10, filing ID 2026-001973400.
+- Contact: `hrl-han@hapaxresearch.com` (see `SECURITY.md` and https://hapaxresearch.com/about/#contact). The network commits to receipt, retention and published correction. It promises no response time.
 - Governance reference: https://github.com/hapax-systems/hapax-constitution
 
 ## Portfolio position
 
-Public adoption commons. Separate from council-local policyflow primitives and from the Hapax council runtime.
+Archived early standalone governance-hook prototype. Superseded for active governed agent-delivery inspection and preview by hapax-systems/reins.
 
 ---
+
+*HACA-C v0.3.15, the lab's draft rule for labelling machine-made text, not an external certification. No request to a natural person to approve the final wording, and no such approval, was found in hrl-han's sending, review and coordination records when the text was released. hrl-han releases a text once its checking is complete, under a standing rule that hrl-han's principal, who is not named in this text, adopted before the text was drafted. Review record: https://hapaxresearch.com/review-record/ (open to anyone). This label records how the text was made; it does not certify that the text is true. An unaltered record can contain false claims or miss relevant events.*
 
 This file is rendered from `hapax-constitution/sdlc/render/`. Do not edit by hand; edits will be overwritten on next render. To change content, edit `sdlc/render/repos.yaml` or the renderer templates in `hapax-constitution`.

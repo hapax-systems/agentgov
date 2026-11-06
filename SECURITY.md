@@ -1,6 +1,6 @@
 # Security policy
 
-This repository is published by Hapax Research Lab and is archived from active development. Public repository surfaces are not a multi-tenant product, customer-data processor, or public auth service. That boundary is a scope statement, not a warranty about every internal integration.
+This repository is published by Hapax Research Lab. Public repository surfaces are not a multi-tenant product, customer-data processor, or public auth service. That boundary is a scope statement, not a warranty about every internal integration.
 
 ## Disclosure path
 
@@ -22,8 +22,12 @@ In scope: exposure of secrets or private material in public commits/artifacts, p
 
 ## Response time
 
-Best effort; no SLA. Messages sent to this address fall under the commitment stated on the contact page: "The network commits to receipt, retention and published correction. It promises no response time." Critical disclosures, such as remote code execution or leaked secrets in published commits, are triaged out of band as soon as they are read, not deferred to a maintenance window. Other reports wait for one.
+Best effort; no SLA. Messages sent to this address fall under the commitment stated on the contact page: "The network commits to receipt, retention and published correction. It promises no response time." The page also says: "Today one person inside the network is the first reader of incoming mail, so a correction request currently reaches the network through that person." Critical disclosures, such as remote code execution or leaked secrets in published commits, are triaged out of band as soon as they are read, not deferred to a maintenance window. Other reports wait for one.
 
 ## Advisory record
 
 This rendered policy does not maintain a complete dated advisory ledger. Current advisories, if any, belong in release notes, security notices, or publication-bus records with their own dates and receipts.
+
+---
+
+This file is rendered from `hapax-constitution/sdlc/render/`. Edits are overwritten on next render.
